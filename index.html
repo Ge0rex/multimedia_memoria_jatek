@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <link href="styles.css" rel="stylesheet">
+  <link rel="icon" href="fajlok/kepek/isten.jpg">
+  <script src="script.js" async></script>
+  <title>Párosító</title>
+</head>
+<body>
+  <div class="overlay-text lathato">
+    Katt a kezdéshez
+  </div>
+  <div id="game-over-text" class="overlay-text">
+    Játék Vége
+    <span class="overlay-text-kicsi">Katt az újrakezdéshez</span>
+  </div>
+  <div id="gyozelem-text" class="overlay-text">
+    Nyertél
+    <span class="overlay-text-kicsi">Katt az újrakezdéshez</span>
+  </div>
+  <div id="top_list">
+      <p id="list"></p>
+  </div>
+  <div class="game-info-container">
+    <div class="game-info">
+      Idő <span id="hatralevoido">120</span>
+    </div>
+    <div class="game-info">
+      Klikk <span id="forditasok">0</span>
+    </div>
+  </div>
+  <div class="game-container">
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/alfa.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/alfa.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/alphatauri.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/alphatauri.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/am.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/am.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/ferrari.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/ferrari.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/mclaren.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/mclaren.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/mercedes.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/mercedes.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/redbull.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/redbull.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/williams.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/williams.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/haas.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/haas.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/alpine.png">
+      </div>
+    </div>
+    <div class="kartya">
+      <div class="kartya-hatulja kartya-kep">
+        <img class="boritas" src="fajlok/kepek/formula1.png">
+      </div>
+      <div class="kartya-eleje kartya-kep">
+        <img class="kartya-ertek" src="fajlok/kepek/alpine.png">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

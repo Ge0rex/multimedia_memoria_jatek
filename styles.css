@@ -1,0 +1,189 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(rgb(10, 95, 91), rgb(42, 43, 43));
+}
+
+.game-info-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-info {
+  font-family: Arial, Helvetica, sans-serif, serif;
+  color: rgb(255, 255, 255);
+  font-size: 4em;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 500px;
+}
+
+
+#list {
+  left: 0;
+  font-size: 18px;
+  position: relative;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#top_list {
+  width: 160px;
+  height: 500px;
+  left:2px;
+  top: 130px;
+  border: 3px solid black;
+  background: radial-gradient(rgb(233, 235, 235), rgb(2, 17, 17));
+  align-content: center;
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 12px;
+  border-width: 4px;
+  border-style: solid;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.kartya {
+  position: relative;
+  height: 175px;
+  width: 125px;
+}
+
+
+.kartya-kep {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  backface-visibility: hidden;
+
+  border-width: 1px;
+  border-style: ridge;
+  transition: transform 500ms ease-in-out;
+}
+
+.kartya-hatulja {
+  background-color: rgb(82, 82, 82);
+  border-color: rgb(0, 0, 0);
+}
+
+.kartya-eleje {
+  background-color: rgb(255, 255, 255);
+  border-color: #333;
+  transform: rotateY(180deg);
+}
+
+.boritas {
+  align-self: flex-start;
+  transform: translateY(-10px);
+  transition: transform 100ms ease-in-out;
+}
+
+.kartya.lathato .kartya-eleje {
+  transform: rotateY(0)
+}
+
+.kartya.lathato .kartya-hatulja {
+  transform: rotateY(-180deg);
+}
+
+.kartya.parositott .kartya-ertek {
+  animation: dance 1s linear infinite 500ms;
+}
+
+.kartya-ertek {
+  transition: transform 100ms ease-in-out;
+  transform: scale(.9);
+}
+
+.kartya-eleje:hover .kartya-ertek {
+  transform: scale(1);
+}
+
+.kartya-hatulja:hover .boritas {
+  transform: translateY(0)
+}
+
+.overlay-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: rgb(0, 204, 255);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, serif;
+}
+
+.overlay-text-kicsi {
+  font-size: .3em;
+}
+
+.overlay-text.lathato {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 10em;
+  }
+}
+
+@keyframes dance {
+  0%, 100%  {
+    transform: scale(1,1);
+  }
+  25% {
+    transform: scale(1.05,1.05);
+  }
+  75% {
+    transform: scale(1.1,1.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .game-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
